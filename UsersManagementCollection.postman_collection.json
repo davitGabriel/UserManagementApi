@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "38073554-9a81-4a12-ad20-e6f054e33715",
+		"name": "UsersManagementCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40922945"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/Users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/Users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5152/api/Users/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"Users",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "17",
+							"description": "Starting From 10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"test\",\r\n    \"lastName\": \"testyan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5152/api/Users/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"Users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5152/api/Users/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"Users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Address for User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"apartment\": \"45\",\r\n  \"street\": \"Komitas\",\r\n  \"zipCode\": \"0000\",\r\n  \"city\": \"Yerevan\",\r\n  \"country\": \"Armenia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5152/api/UserAddresses/:userId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"UserAddresses",
+						":userId"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Addresses",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5152/api/UserAddresses/user/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"UserAddresses",
+						"user",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Address",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"apartment\": \"46\",\r\n  \"street\": \"Streetst\",\r\n  \"zipCode\": \"1058\",\r\n  \"city\": \"Yerevan\",\r\n  \"country\": \"Armenia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5152/api/UserAddresses/:addressId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"UserAddresses",
+						":addressId"
+					],
+					"variable": [
+						{
+							"key": "addressId",
+							"value": "21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User Address",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5152/api/UserAddresses/:addressId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"UserAddresses",
+						":addressId"
+					],
+					"variable": [
+						{
+							"key": "addressId",
+							"value": "21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Gift Card",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"string\",\r\n  \"amount\": 300,\r\n  \"expirationDate\": \"2025-04-07T04:02:54.902Z\",\r\n  \"isRedeemed\": true,\r\n  \"purchaseDate\": \"2025-04-07T04:02:54.902Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5152/api/UserGiftCards/:userId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"UserGiftCards",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redeem Gift Card",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5152/api/UserGiftCards/:giftCardId/redeem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"UserGiftCards",
+						":giftCardId",
+						"redeem"
+					],
+					"variable": [
+						{
+							"key": "giftCardId",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User GiftCards",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5152/api/UserGiftCards/user/:userId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"api",
+						"UserGiftCards",
+						"user",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5152",
+			"type": "default"
+		}
+	]
+}
